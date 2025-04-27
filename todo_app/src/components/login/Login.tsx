@@ -39,10 +39,9 @@ const Login = () => {
         <>
         <ToastContainer />
         <Box display='flex' flexDirection='row' justifyContent='center' alignItems='center' height='100vh'>
-        <Box display='flex' flexDirection="column" justifyContent='center'>
+        <Box display='flex' flexDirection="column" justifyContent='center' className={mystyles['container']}>
             <Typography variant="h4" gutterBottom className={mystyles['loginTitle']}>Login</Typography>
             <Typography variant="h6" gutterBottom>Welcome back! Please login to your account.</Typography>
-            <Typography>Email</Typography>
             <TextField
                 className={mystyles['textField']}
                 id="filled-basic"
@@ -52,7 +51,6 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
             />
-            <Typography>Password</Typography>
             <TextField
                 className={mystyles['textField']}
                 label="password"
@@ -62,7 +60,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
             />
-            <Typography>Don't have an account? <Link to='/' style={{textDecoration: 'none'}}>Register</Link></Typography>
+            <Typography style={{ marginTop: '3%', marginBottom: '4%', textAlign:'center'}}>Don't have an account? <Link to='/' style={{textDecoration: 'none'}}>Register</Link></Typography>
             <Button variant="outlined" onClick={handleSubmit}>Submit</Button>
         </Box>
         </Box>
